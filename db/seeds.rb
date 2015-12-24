@@ -1,13 +1,13 @@
 player1 = User.create(
     username: "ch33sybr3ad",
-    password: 123456,
+    password: "123456",
     first_name: "jason",
     last_name: "zhao" 
   )
 
 player2 = User.create(
     username: "euniceschoi",
-    password: 123456,
+    password: "123456",
     first_name: "eunice",
     last_name: "choi" 
   )

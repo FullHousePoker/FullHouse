@@ -7,7 +7,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :table_size
       t.text :players, array: true, default: []
       t.integer :host_id
-      t.string :type
+      t.string :variation
       t.timestamps null: false
     end
   end

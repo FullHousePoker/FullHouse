@@ -1,11 +1,9 @@
 jason: 
-  username: "ch33sybr3ad"
-  password: "123456"
+  email: "ch33sybr3ad"
   first_name: "jason"
   last_name: "zhao" 
 
 eunice: 
-  username: "euniceschoi"
-  password: "123456"
+  email: "euniceschoi"
   first_name: "eunice"
   last_name: "choi" 

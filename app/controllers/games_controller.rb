@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  protect_from_forgery with: :null_session
 
   def index
     @games = Game.all

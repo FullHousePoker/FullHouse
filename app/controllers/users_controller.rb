@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  protect_from_forgery with: :null_session
 
   def index
     @users = User.all
@@ -26,8 +27,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-      :username,
-      :password,
+      :email,
       :first_name,
       :last_name
       )

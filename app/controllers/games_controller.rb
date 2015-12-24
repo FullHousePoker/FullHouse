@@ -11,7 +11,5 @@ class GamesController < ApplicationController
 
     @games = Game.near([lat, lng], 20)
     render json: @games
-
-    debugger
   end
 end

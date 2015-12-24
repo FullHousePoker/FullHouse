@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   protect_from_forgery with: :null_session
   skip_before_filter  :verify_authenticity_token
+  before_filter :add_cors_to_json
 
   def index
     @games = Game.all
@@ -36,6 +37,12 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @game.destroy
     render nothing: true, status: 204
+  end
+
+  protected 
+
+  def add_cors_to_json
+    response.headers["Access-Control-Allow-Origin"] = "*"
   end
 
   private

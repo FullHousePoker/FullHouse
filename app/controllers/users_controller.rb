@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   protect_from_forgery with: :null_session
   skip_before_filter  :verify_authenticity_token
+  before_filter :add_cors_to_json
+
 
   def index
     @users = User.all
@@ -22,6 +24,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     render nothing: true, status: 204
+  end
+
+  protected 
+
+  def add_cors_to_json
+    response.headers["Access-Control-Allow-Origin"] = "*"
   end
 
   private

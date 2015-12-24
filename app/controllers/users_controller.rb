@@ -11,11 +11,15 @@ class UsersController < ApplicationController
   end
 
   def update
-
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    render json: @user
   end
 
-  def delete
-    
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    render nothing: true, status: 204
   end
 
   private

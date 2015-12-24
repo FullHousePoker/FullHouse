@@ -1,4 +1,6 @@
 class Game < ActiveRecord::Base
+  attr_accessor :geolocation
+
   belongs_to :host, class_name: 'User'
 
   VALID_VARIATIONS = ["holdem", "omaha", "7-card stud"]
@@ -6,8 +8,8 @@ class Game < ActiveRecord::Base
   validates_presence_of :lat, :lng, :table_size, :host_id, :variation
   validate :variation_must_be_valid
 
-  geocoded_by :game, :latitude  => :lat, :longitude => :lng
-  after_validation :geocode
+  geocoded_by :game, latitude: :lat, longitude: :lng
+  after_validation :geocode, :if => :geolocation
 
   private
 

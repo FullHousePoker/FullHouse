@@ -14,13 +14,19 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create(game_params)
+    @game = Game.new(game_params)
+    @game.geolocation = false
+
+    @game.save
     render json: @game
   end
 
   def update
     @game = Game.find(params[:id])
-    @game.update_attributes(game_params)
+    @game.assign_attributes(game_params)
+    @game.geolocation = false
+
+    @game.save
     render json: @game
   end
 

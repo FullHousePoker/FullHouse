@@ -8,6 +8,10 @@ class GamesController < ApplicationController
   def nearby_games
     lng = params["lng"]
     lat = params["lat"]
+
+    @games = Game.near([lat, lng], 20)
+    render json: @games
+
     debugger
   end
 end

@@ -6,6 +6,9 @@ class Game < ActiveRecord::Base
   validates_presence_of :lat, :lng, :table_size, :host_id, :variation
   validate :variation_must_be_valid
 
+  geocoded_by :game, :latitude  => :lat, :longitude => :lng
+  after_validation :geocode
+
   private
 
   def variation_must_be_valid

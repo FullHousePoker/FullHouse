@@ -1,11 +1,17 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+dublin:
+  lat: 37.7022
+  lng: -121.9358
+  buy_in_amount: 40
+  table_size: 9
+  players: [2]
+  host_id: 1
+  variation: "holdem"
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+atlanta:
+  lat: 33.7550
+  lng: 84.3900
+  buy_in_amount: 40
+  table_size: 9
+  players: [2]
+  host_id: 1
+  variation: "holdem"

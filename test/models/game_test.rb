@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class GameTest < ActiveSupport::TestCase
+
   test 'game must have a valid variation' do
     game = Game.create(
         lat: 180,
@@ -14,4 +15,5 @@ class GameTest < ActiveSupport::TestCase
 
     assert_equal "Invalid variation poker variation is invalid", game.errors.full_messages.to_sentence
   end
+
 end

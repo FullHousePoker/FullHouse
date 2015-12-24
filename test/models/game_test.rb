@@ -10,7 +10,8 @@ class GameTest < ActiveSupport::TestCase
         table_size: 9,
         players: [2],
         host_id: 1,
-        variation: "wrong"
+        variation: "wrong",
+        date_time: 2009-01-01 00:00:00
       )
 
     assert_equal "Invalid variation poker variation is invalid", game.errors.full_messages.to_sentence

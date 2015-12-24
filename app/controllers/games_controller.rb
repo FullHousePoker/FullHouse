@@ -48,7 +48,8 @@ class GamesController < ApplicationController
       :table_size,
       :players,
       :host_id,
-      :variation
+      :variation,
+      :date_time
       )
   end
 end

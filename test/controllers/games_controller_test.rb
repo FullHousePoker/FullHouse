@@ -32,7 +32,8 @@ class GamesControllerTest < ActionController::TestCase
       table_size: 9,
       players: [2],
       host_id: 1,
-      variation: "holdem"
+      variation: "holdem",
+      datetime: 2009-01-01 00:00:00
     }
 
     post :create, game: game_params

@@ -6,6 +6,7 @@ dublin:
   players: [2]
   host_id: 1
   variation: "holdem"
+  date_time: 2009-01-01 00:00:00
 
 atlanta:
   lat: 33.7550
@@ -15,3 +16,4 @@ atlanta:
   players: [2]
   host_id: 1
   variation: "holdem"
+  date_time: 2009-01-01 00:00:00
